@@ -11,7 +11,7 @@ export const WebSocketProvider: React.FC<WebSocketProviderProps> = ({ children }
   const [gameState, setGameState] = useState({ players: [], messages: [] });
 
   useEffect(() => {
-    const newWs = new WebSocket("ws://YOUR_BACKEND_URL"); // Replace with actual WebSocket URL
+    const newWs = new WebSocket("wss://confessionsgameserver.onrender.com"); // Replace with actual WebSocket URL
     newWs.onopen = () => console.log("✅ Connected to WebSocket server!");
     newWs.onclose = () => console.warn("⚠️ WebSocket Disconnected!");
 
